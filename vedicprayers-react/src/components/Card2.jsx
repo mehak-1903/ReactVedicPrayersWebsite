@@ -14,6 +14,7 @@ import img9 from "../assets/Sankat-mochan-ashtak.png";
 import img10 from "../assets/hanuman19.webp";
 import img11 from "../assets/Shri-Hanuman-Bahuk.jpeg";
 import img12 from "../assets/rinmochan.jpg";
+import img13 from "../assets/tuesday-hanuman-ji.webp";
 
 const cardData = [
   {
@@ -94,7 +95,7 @@ const cardData = [
 function Card2() {
   return (
     <div className="max-w-[1260px] border border-red-200 h-auto m-auto">
-      <div className="h-full w-full flex">
+      <div className="h-full w-full flex gap-5">
         <div className="h-full w-[800px] grid grid-cols-2 gap-6">
           {cardData.map((item, index) => (
             <div
@@ -106,13 +107,13 @@ function Card2() {
                   <img
                     className="rounded-t-lg transition-transform duration-300 hover:scale-105 w-full h-auto object-cover"
                     src={item.image}
-                    alt="Vedic Logo"
+                    alt="Hanuman Ji"
                   />
                 </div>
               </a>
               <div className="p-5">
                 <p className="mb-3 font-normal text-left text-gray-700">
-                    13 जून 2025
+                  13 जून 2025
                 </p>
                 <a href="#">
                   <h5 className="mb-2 mt-5 text-2xl text-left font-bold tracking-tight text-gray-900 text-black hover:text-orange-600">
@@ -140,7 +141,30 @@ function Card2() {
             </div>
           ))}
         </div>
-        <div className="border border-green-200 h-full w-[460px]"></div>
+        {/* Right */}
+        <div className="border border-green-200 h-full w-[460px] rounded-lg">
+          <h2 className="font-bold text-4xl mb-2">आज का कार्यक्रम</h2>
+          <h2 className="font-bold text-xl text-gray-700">June 13, 2025</h2>
+          <div className="mt-7 w-full h-[300px] max-h-[300px] rounded-lg overflow-hidden relative group">
+            {/* Zoomed Background Layered. */}
+            <div
+              className="absolute inset-0 bg-cover bg-no-repeat bg-center transition-transform duration-300 group-hover:scale-105 z-0"
+              style={{ backgroundImage: `url(${img13})` }}
+            ></div>
+
+            {/* Overlay Text */}
+            <div className="absolute inset-0 bg-black opacity-0 group-hover:bg-opacity-40 transition duration-300 z-10"></div>
+
+            {/* Text appears only on hover */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+              <h4 className="text-white text-2xl font-bold text-center ">
+                <a href="" className="hover:text-orange-600">Hanuman Worship |  मंगलवार के दिन क्यों की जाती है हनुमान जी की पूजा | PDF </a>
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        
       </div>
     </div>
   );
