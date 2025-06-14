@@ -15,6 +15,15 @@ import img10 from "../assets/hanuman19.webp";
 import img11 from "../assets/Shri-Hanuman-Bahuk.jpeg";
 import img12 from "../assets/rinmochan.jpg";
 import img13 from "../assets/tuesday-hanuman-ji.webp";
+// Ads
+import image1 from "../assets/kinsta1.png";
+import image2 from "../assets/GreenGreeks1.gif";
+import image3 from "../assets/kinsta2.webp";
+import image4 from "../assets/Green2.webp";
+// popular post
+import image5 from "../assets/rinmochan-mangl-stotra-popular-post1.jpeg";
+import image6 from "../assets/Shri-Hanuman-Bahuk-popular-post2.jpeg";
+import image7 from "../assets/Maa-Katyayani-stotra-popular-post3.jpeg";
 
 const cardData = [
   {
@@ -88,13 +97,13 @@ const cardData = [
     image: img12,
     title: "Rinmochan Mangal Stotra | ऋणमोचक मंगल स्तोत्र | PDF",
     description:
-      "Rinmochan Mangal Stotra | ऋणमोचक मंगल स्तोत्र | PDFमङ्गल , भूमिपुत्र(धरती का पुत्र), ऋणहर्ता (कर्ज का नाश…",
+      "मङ्गल , भूमिपुत्र(धरती का पुत्र), ऋणहर्ता (कर्ज का नाश करने वाले), धनप्रद(धन को प्रदान करने वाले), स्थिरासन…",
   },
 ];
 
 function Card2() {
   return (
-    <div className="max-w-[1260px] border border-red-200 h-auto m-auto">
+    <div className="max-w-[1260px] border border-red-200 h-auto m-auto my-10">
       <div className="h-full w-full flex gap-5">
         <div className="h-full w-[800px] grid grid-cols-2 gap-6">
           {cardData.map((item, index) => (
@@ -106,7 +115,7 @@ function Card2() {
                 <div className="overflow-hidden">
                   <img
                     className="rounded-t-lg transition-transform duration-300 hover:scale-105 w-full h-auto object-cover"
-                    src={item.image}
+                    srcSet={item.image}
                     alt="Hanuman Ji"
                   />
                 </div>
@@ -145,7 +154,7 @@ function Card2() {
         <div className="border border-green-200 h-full w-[460px] rounded-lg">
           <h2 className="font-bold text-4xl mb-2">आज का कार्यक्रम</h2>
           <h2 className="font-bold text-xl text-gray-700">June 13, 2025</h2>
-          <div className="mt-7 w-full h-[300px] max-h-[300px] rounded-lg overflow-hidden relative group">
+          <div className="mt-7 w-full h-[300px] max-h-[300px] rounded-lg shadow-lg shadow-[0_4px_10px_rgba(0,0,0,0.6)] overflow-hidden relative group">
             {/* Zoomed Background Layered. */}
             <div
               className="absolute inset-0 bg-cover bg-no-repeat bg-center transition-transform duration-300 group-hover:scale-105 z-0"
@@ -158,13 +167,160 @@ function Card2() {
             {/* Text appears only on hover */}
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
               <h4 className="text-white text-2xl font-bold text-center ">
-                <a href="" className="hover:text-orange-600">Hanuman Worship |  मंगलवार के दिन क्यों की जाती है हनुमान जी की पूजा | PDF </a>
+                <a href="" className="hover:text-orange-600">
+                  Hanuman Worship | मंगलवार के दिन क्यों की जाती है हनुमान जी की
+                  पूजा | PDF{" "}
+                </a>
               </h4>
             </div>
           </div>
-        </div>
 
-        
+          {/* kinsta */}
+          <div className="mb-4 mt-8 p-[35px_30px] border rounded-[10px] border-grey-400 w-full h-auto flex justify-center items-center">
+            <a href="#">
+              <img srcSet={image1} alt="Kinsta" />
+            </a>
+          </div>
+
+          {/* Search */}
+
+          <div className="mb-4 mt-8 p-[35px_30px] border rounded-[10px] border-grey-400 w-full h-auto ">
+            <label
+              htmlFor="search"
+              className="block text-left text-lg font-[600] ml-1"
+            >
+              Search
+            </label>
+            <div className="w-full h-auto flex justify-center items-center">
+              <input
+                type="text"
+                id="search"
+                className="px-7 py-2 rounded-3xl border border-gray-200 mr-5 font-normal focus:outline-none focus:ring-1 focus:ring-orange-600"
+              />
+              <button
+                type="submit"
+                className="p-[10px_30px] text-lg text-white rounded-3xl border border-orange-600 bg-[linear-gradient(to_right,#e45229_0%,#e99176_51%,#e45229_100%)] bg-[length:200%_auto]"
+              >
+                Search
+              </button>
+            </div>
+          </div>
+
+          {/* GreenGreek */}
+          <div className="mb-4 mt-8 p-[35px_30px] border rounded-[10px] border-grey-400 w-full h-auto flex justify-center items-center">
+            <a href="#" target="_top">
+              <img srcSet={image2} alt="" />
+            </a>
+          </div>
+
+          {/* Popular Posts */}
+
+          <div className="mb-4 mt-8 p-[35px_30px] border rounded-[10px] border-grey-400 w-full h-auto flex items-center flex-col">
+            <h3 className="font-bold text-2xl">
+              Popular Posts
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="60px"
+                height="25px"
+                viewBox="0 0 60 25"
+                className=" mx-auto mt-2"
+              >
+                <path
+                  d="M0 5 Q 5 0, 10 5 T 20 5 T 30 5 T 40 5 T 50 5 "
+                  fill="none"
+                  stroke="red"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </h3>
+
+            {/* Post list */}
+            {/* Post1 */}
+            <div className="flex items-center gap-6 mb-8 mt-4 relative">
+              <div className="absolute -top-2 -left-1 border-4 border-white rounded-full bg-orange-600 text-white text-xs px-2 py-1 font-bold z-10">
+                1
+              </div>
+              <div className="rounded-full w-[60px] h-[60px] overflow-hidden ">
+                <a href="#">
+                  <img
+                    srcSet={image5}
+                    alt=""
+                    className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105"
+                  />
+                </a>
+              </div>
+              <div>
+                <h6 className="font-bold text-base mb-1 text-left hover:text-orange-600">
+                  <a href="#">
+                    Rinmochan Mangal Stotra | ऋणमोचक मंगल स्तोत्र | PDF
+                  </a>
+                </h6>
+                <p className="text-left">14 सितम्बर 2023</p>
+              </div>
+            </div>
+
+            {/* Post2 */}
+            <div className="flex justify-between items-center gap-6 mb-8 relative">
+              <div className="absolute -top-2 -left-1 border-4 border-white rounded-full bg-orange-600 text-white text-xs px-2 py-1 font-bold z-10">
+                2
+              </div>
+              <div className="rounded-full w-[60px] h-[60px] overflow-hidden">
+                <a href="#">
+                  <img
+                    srcSet={image6}
+                    alt=""
+                    className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105"
+                  />
+                </a>
+              </div>
+              <div>
+                <h6 className="font-bold text-base mb-1 text-left hover:text-orange-600">
+                  <a href="#">Shri Hanuman Bahuk | श्री हनुमान बाहुक | PDF</a>
+                </h6>
+                <p className="text-left">07 सितम्बर 2023</p>
+              </div>
+            </div>
+
+            {/* Post3 */}
+            <div className="flex justify-between items-center gap-6 mb-4 relative">
+              <div className="absolute -top-2 -left-1 border-4 border-white rounded-full bg-orange-600 text-white text-xs px-2 py-1 font-bold z-10">
+                3
+              </div>
+              <div className="rounded-full w-[60px] h-[60px] overflow-hidden">
+                <a href="#">
+                  <img
+                    srcSet={image7}
+                    alt=""
+                    className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105"
+                  />
+                </a>
+              </div>
+              <div>
+                <h6 className="font-bold text-base mb-1 text-left hover:text-orange-600">
+                  <a href="#">
+                    Maa Katyayani Stotra | माँ कात्यायनी स्तोत्र | PDF
+                  </a>
+                </h6>
+                <p className="text-left">15 सितम्बर 2023</p>
+              </div>
+            </div>
+          </div>
+
+          {/* kinsta */}
+          <div className="mb-4 mt-8 p-[35px_30px] border rounded-[10px] border-grey-400 w-full h-auto flex justify-center items-center">
+            <a href="#" target="_top">
+              <img srcSet={image3} alt="" />
+            </a>
+          </div>
+
+          {/* Green */}
+          <div className="mb-4 mt-8 p-[35px_30px] border rounded-[10px] border-grey-400 w-full h-auto flex justify-center items-center">
+            <a href="#" target="_top">
+              <img srcSet={image4} alt="" />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );
