@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShareNodes } from "@fortawesome/free-solid-svg-icons";
+import { faShareNodes, faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
+
 // Import Images
 import img1 from "../assets/Mangalwar-Vrat.jpeg";
 import img2 from "../assets/hanuman-aarti.jpeg";
@@ -25,6 +26,7 @@ import image5 from "../assets/rinmochan-mangl-stotra-popular-post1.jpeg";
 import image6 from "../assets/Shri-Hanuman-Bahuk-popular-post2.jpeg";
 import image7 from "../assets/Maa-Katyayani-stotra-popular-post3.jpeg";
 
+// Card Data
 const cardData = [
   {
     image: img1,
@@ -98,12 +100,84 @@ const cardData = [
     title: "Rinmochan Mangal Stotra | ऋणमोचक मंगल स्तोत्र | PDF",
     description:
       "मङ्गल , भूमिपुत्र(धरती का पुत्र), ऋणहर्ता (कर्ज का नाश करने वाले), धनप्रद(धन को प्रदान करने वाले), स्थिरासन…",
+  }
+
+];
+
+// Special Events
+
+const events = [
+  {
+    date: "28 June 2025",
+    name: "Ganesh Chaturthi (Shukla Paksha Chaturthi)",
   },
+  {
+    date: "27 June 2025",
+    name: " Shri Jagannath Rath Yatra",
+  },
+  {
+    date: "26 June 2025",
+    name: "Ashadha Gupt Navratri Begins",
+  },
+  {
+    date: "25 June 2025",
+    name: " Ashadha Amavasya",
+  },
+  {
+    date: "23 June 2025",
+    name: " Masik Shivratri, Krishna Pradosh Vrat",
+  },
+  {
+    date: "21 June 2025",
+    name: "Yogini Ekadashi",
+  },
+  {
+    date: "15 June 2025",
+    name: "Mithuna Sankranti",
+  },
+  {
+    date: "14 June 2025",
+    name: "Krishna Pingala Sankashti Chaturthi",
+  }
+];
+
+const restevents = [
+  {
+    date: "10 June 2025",
+    name: "Vat Purnima Vrat",
+  },
+  {
+    date: "6 June 2025",
+    name: "Nirjala Ekadashi",
+  },
+  {
+    date: "5 June 2025",
+    name: "Ganga Dussehra",
+  },
+  {
+    date: "4 June 2025",
+    name: "Mahesh Navami",
+  },
+]
+
+// tags
+
+const tags = [
+  "#FridaySpl", "#mondaySpl", "#ShaniSpl", "#thurspcl", "#tuespcl", "#wedspl",
+  "Bhairava", "Bhairava chalisa in hindi", "Bhakti",
+  "chaithra navratri", "chaithra navratri 2025", "chaithra navratri 2025 in april",
+  "chaithra navratri 2025 in hindi", "Chalisa", "Durga Puja", "fasting", "festival",
+  "Ganesh Chaturthi", "hanuman chalisa", "Hanuman vrat katha", "Hindu Festival",
+  "Jaimatadi", "Jayambe", "Kathayen", "Lord Shiva", "Maa Chandraghanta",
+  "Maa kushmanda aarti", "Maa Skandmata", "mahadev", "Mahagauri stotra", "Mantra",
+  "Navdurga", "Navratri", "navratri 2025", "Pradosh vrat", "Prayers", "shivshakti",
+  "Shri vishnu aarti", "Stotra", "Surya Namaskar", "vishnu", "Vishnu aarti",
+  "Vishnu chalisa", "Vrat katha", "Vrat Vidhi"
 ];
 
 function Card2() {
   return (
-    <div className="max-w-[1260px] border border-red-200 h-auto m-auto my-10">
+    <div className="max-w-[1260px] h-auto m-auto my-10">
       <div className="h-full w-full flex gap-5">
         <div className="h-full w-[800px] grid grid-cols-2 gap-6">
           {cardData.map((item, index) => (
@@ -151,7 +225,7 @@ function Card2() {
           ))}
         </div>
         {/* Right */}
-        <div className="border border-green-200 h-full w-[460px] rounded-lg">
+        <div className="h-full w-[460px] rounded-lg">
           <h2 className="font-bold text-4xl mb-2">आज का कार्यक्रम</h2>
           <h2 className="font-bold text-xl text-gray-700">June 13, 2025</h2>
           <div className="mt-7 w-full h-[300px] max-h-[300px] rounded-lg shadow-lg shadow-[0_4px_10px_rgba(0,0,0,0.6)] overflow-hidden relative group">
@@ -182,6 +256,43 @@ function Card2() {
             </a>
           </div>
 
+          {/* Special events for the month */}
+          <div className="h-auto w-full rounded bg-[linear-gradient(to_right,#e45229_0%,#e99176_51%,#e45229_100%)] py-[35px] px-[25px]">
+            <h3 className="text-black text-2xl font-bold mb-8">
+              Special Events of the Month.
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="60px"
+                height="25px"
+                viewBox="0 0 60 25"
+                className=" mx-auto mt-4"
+              >
+                <path
+                  d="M0 5 Q 5 0, 10 5 T 20 5 T 30 5 T 40 5 "
+                  fill="none"
+                  stroke="red"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </h3>
+
+            <div className="mt-5">
+              {events.map((event, index) => (
+                <p key={index} className="border-t mt-3 pt-4 text-lg text-semibold text-left">
+                  <strong>{event.date}</strong> - {event.name}
+                </p>
+              ))}
+              {restevents.map((event, index) => (
+                <p key={index} className="border-t mt-3 pt-4 text-left text-lg text-semibold group">
+                  <a href="#">
+                  <strong>{event.date}</strong><span className="text-lg text-semibold group-hover:text-white transition-colors duration-300"> - {event.name} {" "}</span>  <FontAwesomeIcon icon={faUpRightFromSquare} className="text-white"/>
+                  </a>
+                </p>
+              ))}
+            </div>
+          </div>
+
           {/* Search */}
 
           <div className="mb-4 mt-8 p-[35px_30px] border rounded-[10px] border-grey-400 w-full h-auto ">
@@ -209,7 +320,7 @@ function Card2() {
           {/* GreenGreek */}
           <div className="mb-4 mt-8 p-[35px_30px] border rounded-[10px] border-grey-400 w-full h-auto flex justify-center items-center">
             <a href="#" target="_top">
-              <img srcSet={image2} alt="" />
+              <img srcSet={image2} alt="GreenGreek" />
             </a>
           </div>
 
@@ -245,7 +356,7 @@ function Card2() {
                 <a href="#">
                   <img
                     srcSet={image5}
-                    alt=""
+                    alt="Rinmochan Mangal Stotra"
                     className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105"
                   />
                 </a>
@@ -269,7 +380,7 @@ function Card2() {
                 <a href="#">
                   <img
                     srcSet={image6}
-                    alt=""
+                    alt="Shri Hanuman Bahuk "
                     className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105"
                   />
                 </a>
@@ -291,7 +402,7 @@ function Card2() {
                 <a href="#">
                   <img
                     srcSet={image7}
-                    alt=""
+                    alt="Maa Katyayani Stotra "
                     className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-105"
                   />
                 </a>
@@ -307,17 +418,46 @@ function Card2() {
             </div>
           </div>
 
+          {/* Tag Clouds */}
+
+          <div className="mb-4 mt-8 p-[35px_30px] border rounded-[10px] border-grey-400 w-full h-auto flex items-center flex-col">
+            <h3 className="font-bold text-2xl">
+              Tag Clouds
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="60px"
+                height="25px"
+                viewBox="0 0 60 25"
+                className=" mx-auto mt-2"
+              >
+                <path
+                  d="M0 5 Q 5 0, 10 5 T 20 5 T 30 5 T 40 5 T 50 5 "
+                  fill="none"
+                  stroke="red"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </h3>
+
+            <div className="flex flex-wrap gap-2 mt-6">
+              {tags.map((tag, index) => (
+                <span key={index} className="px-5 py-2 bg-gray-100 rounded-full border text-sm cursor-pointer hover:text-orange-600 hover:border-orange-600 transition duration-300">{tag}</span>
+              ))}
+            </div>
+          </div>
+
           {/* kinsta */}
           <div className="mb-4 mt-8 p-[35px_30px] border rounded-[10px] border-grey-400 w-full h-auto flex justify-center items-center">
             <a href="#" target="_top">
-              <img srcSet={image3} alt="" />
+              <img srcSet={image3} alt="kinsta" />
             </a>
           </div>
 
           {/* Green */}
           <div className="mb-4 mt-8 p-[35px_30px] border rounded-[10px] border-grey-400 w-full h-auto flex justify-center items-center">
             <a href="#" target="_top">
-              <img srcSet={image4} alt="" />
+              <img srcSet={image4} alt="Green" />
             </a>
           </div>
         </div>
