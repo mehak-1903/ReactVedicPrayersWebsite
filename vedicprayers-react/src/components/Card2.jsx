@@ -226,8 +226,8 @@ function Card2() {
         </div>
         {/* Right */}
         <div className="h-full w-[460px] rounded-lg">
-          <h2 className="font-bold text-4xl mb-2">आज का कार्यक्रम</h2>
-          <h2 className="font-bold text-xl text-gray-700">June 13, 2025</h2>
+          <h2 className="font-bold text-4xl mb-2 text-center">आज का कार्यक्रम</h2>
+          <h2 className="font-bold text-xl text-gray-700 text-center">June 13, 2025</h2>
           <div className="mt-7 w-full h-[300px] max-h-[300px] rounded-lg shadow-lg shadow-[0_4px_10px_rgba(0,0,0,0.6)] overflow-hidden relative group">
             {/* Zoomed Background Layered. */}
             <div
