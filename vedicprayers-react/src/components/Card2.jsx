@@ -1,5 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faShareNodes, faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import {
+  faShareNodes,
+  faUpRightFromSquare,
+} from "@fortawesome/free-solid-svg-icons";
 import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 
 // Import Images
@@ -33,54 +36,63 @@ const cardData = [
     title: "Shri Hanuman Vrat Katha | श्री हनुमान व्रत कथा | PDF",
     description:
       "एक ब्राम्हण दम्पत्ति के कोई सन्तान न हुई थी जिसके कारण पति-पत्नी दुःखी थे। वह ब्राम्हण हनुमान जी की पूजा…",
+    badge: "Vrat Katha"
   },
   {
     image: img2,
     title: "Shri Hanuman Ji Aarti | श्री हनुमान जी आरती | PDF",
     description:
       "आरती कीजिए, हनुमान लला की, दुष्टों का संहार करने वाले श्री रघुनाथ जी के परम भक्त हनुमान जी की, जिनके…",
+    badge: "Aarti"
   },
   {
     image: img3,
     title: "Shri Hanuman Bajrang Baan | श्री हनुमान बजरंग बाण | PDF",
     description:
       "निश्चय प्रेम प्रतीति ते, विनय करें सन्मान । तेहि के कारज सकल शुभ, सिद्ध करैं हनुमान ।। जय हनुमन्त सन्त हितकारी…",
+    badge: "Bajrang Baan"
   },
   {
     image: img4,
     title: "Shri Hanuman Sathika | श्री हनुमान साठिका | PDF",
     description:
       "वीर बखानौं पवनसुत,जनत सकल जहान । धन्य-धन्य अंजनि-तनय , संकर, हर, हनुमान्॥ अर्थ- वीर पवन पुत्र की…",
+    badge: "Sathika"
   },
   {
     image: img5,
     title: "Shri Hanuman Ji 108 Names | श्री हनुमान जी 108 नाम | PDF",
     description:
       "अंजनेया , महावीर , हनुमत  , मरुतात्माज , तत्त्वज्ञानप्रदा , सीतादेवीमुद्रप्रदायक , अशोकवनकछेत्रे , सर्वमाया विभंजन…",
+    badge: "108 Names"
   },
   {
     image: img6,
     title: "Mangalwar Upay | मंगलवार के दिन करें ये आसान उपाय | PDF",
     description:
       "अगर आपके काम लगातार बिगड़ रहे हैं तो आपको मंगलवार के दिन हनुमान चालीसा का पाठ करना चाहिए…",
+    badge: "Upay"
   },
   {
     image: img7,
     title: "Shri Hanuman Chalisa | श्री हनुमान चालीसा | PDF",
     description:
       "श्री गुरु चरण सरोज रज, निज मनु मुकुर सुधारि। बरनउं रघुबर बिमल जसु, जो दायकु फल चारि॥ बुद्धिहीन तनु जानिके…",
+    badge: "Chalisa"
   },
   {
     image: img8,
     title: "Shri Hanuman Mantras | श्री हनुमान मंत्र | PDF ",
     description:
       "यश-कीर्ति के लिए हनुमान मंत्र, शत्रु पराजय के लिए हनुमान मंत्र, शत्रु पर विजय तथा वशीकरण के लिए हनुमान मंत्र…",
+    badge: "Mantras"
   },
   {
     image: img9,
     title: "Shri Hanuman Ashtak | श्री हनुमान अष्टक | PDF",
     description:
       "बाल समय रवि भक्षि लियो तब, तीनहुं लोक भयो अंधियारों। ताहि सों त्रास भयो जग को, यह संकट काहु सों जात…",
+    badge: "Asthak"
   },
   {
     image: img10,
@@ -88,20 +100,22 @@ const cardData = [
       "Why is Hanuman ji worshipped on Tuesday? | हनुमान जी को मंगलवार को क्यों पूजा जाता है? | PDF",
     description:
       "भारतवर्ष में देवताओं की पूजा का एक गूढ़ और पवित्र इतिहास है। प्रत्येक सप्ताह का एक विशिष्ट दिन किसी न…",
+    badge: "Worshipped"
   },
   {
     image: img11,
     title: "Shri Hanuman Bahuk | श्री हनुमान बाहुक | PDF",
     description:
       "सिंधु-तरन, सिय-सोच-हरन, रबि-बालबरन-तनु। भुज बिसाल, मूरति कराल कालहुको काल जनु || गहन-दहन-निरदहन…",
+    badge: "Bahuk"
   },
   {
     image: img12,
     title: "Rinmochan Mangal Stotra | ऋणमोचक मंगल स्तोत्र | PDF",
     description:
       "मङ्गल , भूमिपुत्र(धरती का पुत्र), ऋणहर्ता (कर्ज का नाश करने वाले), धनप्रद(धन को प्रदान करने वाले), स्थिरासन…",
-  }
-
+    badge: "Stotra"
+  },
 ];
 
 // Special Events
@@ -138,7 +152,7 @@ const events = [
   {
     date: "14 June 2025",
     name: "Krishna Pingala Sankashti Chaturthi",
-  }
+  },
 ];
 
 const restevents = [
@@ -158,42 +172,84 @@ const restevents = [
     date: "4 June 2025",
     name: "Mahesh Navami",
   },
-]
+];
 
 // tags
 
 const tags = [
-  "#FridaySpl", "#mondaySpl", "#ShaniSpl", "#thurspcl", "#tuespcl", "#wedspl",
-  "Bhairava", "Bhairava chalisa in hindi", "Bhakti",
-  "chaithra navratri", "chaithra navratri 2025", "chaithra navratri 2025 in april",
-  "chaithra navratri 2025 in hindi", "Chalisa", "Durga Puja", "fasting", "festival",
-  "Ganesh Chaturthi", "hanuman chalisa", "Hanuman vrat katha", "Hindu Festival",
-  "Jaimatadi", "Jayambe", "Kathayen", "Lord Shiva", "Maa Chandraghanta",
-  "Maa kushmanda aarti", "Maa Skandmata", "mahadev", "Mahagauri stotra", "Mantra",
-  "Navdurga", "Navratri", "navratri 2025", "Pradosh vrat", "Prayers", "shivshakti",
-  "Shri vishnu aarti", "Stotra", "Surya Namaskar", "vishnu", "Vishnu aarti",
-  "Vishnu chalisa", "Vrat katha", "Vrat Vidhi"
+  "#FridaySpl",
+  "#mondaySpl",
+  "#ShaniSpl",
+  "#thurspcl",
+  "#tuespcl",
+  "#wedspl",
+  "Bhairava",
+  "Bhairava chalisa in hindi",
+  "Bhakti",
+  "chaithra navratri",
+  "chaithra navratri 2025",
+  "chaithra navratri 2025 in april",
+  "chaithra navratri 2025 in hindi",
+  "Chalisa",
+  "Durga Puja",
+  "fasting",
+  "festival",
+  "Ganesh Chaturthi",
+  "hanuman chalisa",
+  "Hanuman vrat katha",
+  "Hindu Festival",
+  "Jaimatadi",
+  "Jayambe",
+  "Kathayen",
+  "Lord Shiva",
+  "Maa Chandraghanta",
+  "Maa kushmanda aarti",
+  "Maa Skandmata",
+  "mahadev",
+  "Mahagauri stotra",
+  "Mantra",
+  "Navdurga",
+  "Navratri",
+  "navratri 2025",
+  "Pradosh vrat",
+  "Prayers",
+  "shivshakti",
+  "Shri vishnu aarti",
+  "Stotra",
+  "Surya Namaskar",
+  "vishnu",
+  "Vishnu aarti",
+  "Vishnu chalisa",
+  "Vrat katha",
+  "Vrat Vidhi",
 ];
 
 function Card2() {
   return (
-    <div className="max-w-[1260px] h-auto m-auto my-10">
-      <div className="h-full w-full flex gap-5">
-        <div className="h-full w-[800px] grid grid-cols-2 gap-6">
+    <div className="w-full max-w-screen-xl h-auto m-auto my-10">
+      <div className="h-full w-full flex flex-col md:flex-row gap-5">
+        <div className="h-full w-full max-w-3xl px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
           {cardData.map((item, index) => (
             <div
               key={index}
               className="max-w-sm bg-white border border-gray-100 rounded-lg shadow-sm text-black border-gray-300"
             >
               <a href="#">
-                <div className="overflow-hidden">
+                <div className="overflow-hidden relative">
                   <img
-                    className="rounded-t-lg transition-transform duration-300 hover:scale-105 w-full h-auto object-cover"
+                    className="rounded-t-lg transition-transform duration-300 hover:scale-105 w-full h-auto rounded object-cover"
                     srcSet={item.image}
                     alt="Hanuman Ji"
                   />
+
+                  {/* Badge */}
+
+                  <div className="absolute top-2 left-2 px-2 py-1 text-xs font-semibold text-white bg-orange-600 rounded-xl">
+                    {item.badge}
+                  </div>
                 </div>
               </a>
+
               <div className="p-5">
                 <p className="mb-3 font-normal text-left text-gray-700">
                   13 जून 2025
@@ -224,10 +280,15 @@ function Card2() {
             </div>
           ))}
         </div>
+
         {/* Right */}
-        <div className="h-full w-[460px] rounded-lg">
-          <h2 className="font-bold text-4xl mb-2 text-center">आज का कार्यक्रम</h2>
-          <h2 className="font-bold text-xl text-gray-700 text-center">June 13, 2025</h2>
+        <div className="h-full w-full md:max-w-[460px] px-4 rounded-lg">
+          <h2 className="font-bold text-4xl mb-2 text-center">
+            आज का कार्यक्रम
+          </h2>
+          <h2 className="font-bold text-xl text-gray-700 text-center">
+            June 13, 2025
+          </h2>
           <div className="mt-7 w-full h-[300px] max-h-[300px] rounded-lg shadow-lg shadow-[0_4px_10px_rgba(0,0,0,0.6)] overflow-hidden relative group">
             {/* Zoomed Background Layered. */}
             <div
@@ -279,14 +340,28 @@ function Card2() {
 
             <div className="mt-5">
               {events.map((event, index) => (
-                <p key={index} className="border-t mt-3 pt-4 text-lg text-semibold text-left">
+                <p
+                  key={index}
+                  className="border-t mt-3 pt-4 text-lg text-semibold text-left"
+                >
                   <strong>{event.date}</strong> - {event.name}
                 </p>
               ))}
               {restevents.map((event, index) => (
-                <p key={index} className="border-t mt-3 pt-4 text-left text-lg text-semibold group">
+                <p
+                  key={index}
+                  className="border-t mt-3 pt-4 text-left text-lg text-semibold group"
+                >
                   <a href="#">
-                  <strong>{event.date}</strong><span className="text-lg text-semibold group-hover:text-white transition-colors duration-300"> - {event.name} {" "}</span>  <FontAwesomeIcon icon={faUpRightFromSquare} className="text-white"/>
+                    <strong>{event.date}</strong>
+                    <span className="text-lg text-semibold group-hover:text-white transition-colors duration-300">
+                      {" "}
+                      - {event.name}{" "}
+                    </span>{" "}
+                    <FontAwesomeIcon
+                      icon={faUpRightFromSquare}
+                      className="text-white"
+                    />
                   </a>
                 </p>
               ))}
@@ -442,7 +517,12 @@ function Card2() {
 
             <div className="flex flex-wrap gap-2 mt-6">
               {tags.map((tag, index) => (
-                <span key={index} className="px-5 py-2 bg-gray-100 rounded-full border text-sm cursor-pointer hover:text-orange-600 hover:border-orange-600 transition duration-300">{tag}</span>
+                <span
+                  key={index}
+                  className="px-5 py-2 bg-gray-100 rounded-full border text-sm cursor-pointer hover:text-orange-600 hover:border-orange-600 transition duration-300"
+                >
+                  {tag}
+                </span>
               ))}
             </div>
           </div>

@@ -106,9 +106,9 @@ const bgImage = [
 export default function Card() {
   return (
     <div>
-      <div className="max-w-[1260px] h-auto m-auto my-5">
-        <div className="flex justify-center items-center w-full">
-          <ul className="flex justify-center items-center w-full gap-9 text-semibold">
+      <div className="w-full max-w-screen-xl h-auto m-auto my-5">
+        <div className="flex justify-center items-center w-full flex-col md:flex-row">
+          <ul className="flex flex-col md:flex-row justify-center items-center w-full gap-9 text-semibold">
             {navli.map((list, index) => (
               <li className="relative group text-lg">
                 <a href="#" key={`nav1-${index}`}>
@@ -191,11 +191,11 @@ export default function Card() {
           </ul>
         </div>
       </div>
-      <div className="flex justify-center items-center w-full gap-5">
+      <div className="flex justify-center items-center px-4 w-full gap-5 flex-col md:flex-row">
         {bgImage.map((images, index) => (
           <div
             key={`card-${index}`}
-            className="w-[288px] h-[356px] border border-black-300 mb-8 rounded-2xl overflow-hidden relative group"
+            className="w-full md:max-w-[288px] h-[356px] border border-black-300 mb-8 rounded-2xl overflow-hidden relative group"
           >
             {/* Background Image Layer with Hover Scale */}
 

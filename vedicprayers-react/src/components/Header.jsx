@@ -11,7 +11,7 @@ import { faSearch, faBars } from "@fortawesome/free-solid-svg-icons";
 
 export const Header = () => {
   return (
-    <div className="flex justify-between items-center h-auto w-[1260px] m-auto border-b border-grey-400 py-7">
+    <div className="flex justify-between items-center flex-col md:flex-row h-auto w-full max-w-screen-xl m-auto border-b border-grey-400 py-[30px] px-[12px]">
       <div className="flex gap-5">
         <a href="#" className="hover:text-orange-600">
           <FontAwesomeIcon icon={faFacebookF} />
@@ -46,6 +46,8 @@ export const Header = () => {
         <button className="h-[30] w-[30] rounded-full border-none bg-[linear-gradient(to_right,#e45229_0%,#e99176_51%,#e45229_100%)] py-2 px-3 text-white">
           <FontAwesomeIcon icon={faBars} />
         </button>
+
+        <div className="w-[300px] bg-white border border-gray-400"></div>
       </div>
     </div>
   );
