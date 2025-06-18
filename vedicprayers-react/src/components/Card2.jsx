@@ -18,7 +18,6 @@ import img9 from "../assets/Sankat-mochan-ashtak.png";
 import img10 from "../assets/hanuman19.webp";
 import img11 from "../assets/Shri-Hanuman-Bahuk.jpeg";
 import img12 from "../assets/rinmochan.jpg";
-import img13 from "../assets/tuesday-hanuman-ji.webp";
 // Ads
 import image1 from "../assets/kinsta1.png";
 import image2 from "../assets/GreenGreeks1.gif";
@@ -293,7 +292,7 @@ function Card2() {
             {/* Zoomed Background Layered. */}
             <div
               className="absolute inset-0 bg-cover bg-no-repeat bg-center transition-transform duration-300 group-hover:scale-105 z-0"
-              style={{ backgroundImage: `url(${img13})` }}
+              style={{ backgroundImage: `url("https://vedicprayers.com/wp-content/uploads/2023/10/Mangalwar-Upay-550x367.jpeg")` }}
             ></div>
 
             {/* Overlay Text */}
@@ -377,7 +376,7 @@ function Card2() {
             >
               Search
             </label>
-            <div className="w-full h-auto flex justify-center items-center">
+            <div className="w-full h-auto flex flex-col md:flex-row gap-4 justify-center items-center">
               <input
                 type="text"
                 id="search"

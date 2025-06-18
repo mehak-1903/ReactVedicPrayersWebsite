@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import img1 from "../assets/Mangalwar-Vrat.jpeg";
+// import img1 from "../assets/Mangalwar-Vrat.jpeg";
 import img2 from "../assets/Shri-Hanuman-Vrat-Katha.jpeg";
 import img3 from "../assets/hanuman-stuti.jpg";
 import img4 from "../assets/Shri-Hanuman-Mantras.jpeg";
@@ -77,28 +77,28 @@ const navli2 = [
 
 const bgImage = [
   {
-    image: img1,
-    names: "Lord Hanuman Vrat | हनुमान व्रत | PDF",
-    badge: "Vrat",
+    image: "https://vedicprayers.com/wp-content/uploads/2023/10/Mangalwar-Upay-550x367.jpeg",
+    names: "Mangalwar Vrat | मंगलवार व्रत रखने से दूर होंगे संकट, जानिए पूजा की सही विधि | PDF",
+    badge: "Lord Hanuman",
   },
   {
-    image: img2,
+    image: "https://vedicprayers.com/wp-content/uploads/2024/10/Shri-Hanuman-Vrat-Katha-%E0%A4%B6%E0%A5%8D%E0%A4%B0%E0%A5%80-%E0%A4%B9%E0%A4%A8%E0%A5%81%E0%A4%AE%E0%A4%BE%E0%A4%A8-%E0%A4%B5%E0%A5%8D%E0%A4%B0%E0%A4%A4-%E0%A4%95%E0%A4%A5%E0%A4%BE.jpeg",
     names: "Lord Hanuman Vrat Katha | हनुमान व्रत कथा | PDF",
     badge: "Vrat Katha",
   },
   {
-    image: img3,
+    image: "https://vedicprayers.com/wp-content/uploads/2024/12/hanuman-stuti.jpg",
     names: "Shri BajrangBali Stuti | श्री बजरंगबली स्तुति | PDF",
     badge: "Stuti",
   },
   {
-    image: img4,
-    names: "Shri Hanuman 108 Names | श्री हनुमान 108 नाम | PDF",
+    image: "https://vedicprayers.com/wp-content/uploads/2023/09/Shri-Hanuman-Mantras.jpeg",
+    names: "Shri Hanuman Mantras | श्री हनुमान मंत्र | PDF",
     badge: "God/Goddess Names",
   },
   {
-    image: img5,
-    names: "Shri Hanuman Ji Aarti | श्री हनुमान जी आरती | PDF",
+    image: "https://vedicprayers.com/wp-content/uploads/2024/06/hanuman-chalisa-360x360.jpeg",
+    names: "Shri Hanuman Chalisa | श्री हनुमान चालीसा | PDF",
     badge: "Aarti",
   },
 ];
@@ -106,7 +106,7 @@ const bgImage = [
 export default function Card() {
   return (
     <div>
-      <div className="w-full max-w-screen-xl h-auto m-auto my-5">
+      <div className="hidden md:block w-full max-w-screen-xl h-auto m-auto my-5">
         <div className="flex justify-center items-center w-full flex-col md:flex-row">
           <ul className="flex flex-col md:flex-row justify-center items-center w-full gap-9 text-semibold">
             {navli.map((list, index) => (
@@ -121,7 +121,7 @@ export default function Card() {
 
                 {/* Dropdown Lists */}
                 {list.submenu && (
-                  <ul className="absolute top-full -left-6 mt-2 w-[280px] h-30 mb-6 bg-white rounded-md shadow-md opacity-0 group-hover:opacity-100 group-hover:translate-x-0 translate-y-2 transition-all duration-300 z-50 invisible group-hover:visible">
+                  <ul className="absolute top-full -left-6 mt-2 w-[280px] mb-6 bg-white rounded-md shadow-md opacity-0 group-hover:opacity-100 group-hover:translate-x-0 translate-y-2 transition-all duration-300 z-50 invisible group-hover:visible">
                     <li>
                       {list.submenu.map((item, subIndex) => (
                         <li key={`sub-${index}-${subIndex}`} className="text-black hover:pl-7 hover:text-gray-400 transition-all duration-300">
@@ -191,7 +191,7 @@ export default function Card() {
           </ul>
         </div>
       </div>
-      <div className="flex justify-center items-center px-4 w-full gap-5 flex-col md:flex-row">
+      <div className="flex justify-center items-center px-4 w-full gap-4 flex-col md:flex-row">
         {bgImage.map((images, index) => (
           <div
             key={`card-${index}`}

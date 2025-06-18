@@ -10,7 +10,7 @@ import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
-    <div className="h-auto w-full max-w-screen-xl px-4 m-auto border-t border-gray-400 flex flex-col items-center md:flex-row md:justify-between  py-7">
+    <div className="h-auto w-full max-w-screen-xl px-4 m-auto border-t border-gray-200 flex flex-col items-center md:flex-row md:justify-between  py-7">
       
       {/* Copyright */}
       <p className="text-center md:text-left">© 2025 All rights reserved</p>
@@ -39,7 +39,7 @@ const Footer = () => {
           <FontAwesomeIcon
             icon={faAngleUp}
             style={{ marginRight: "10px" }}
-            className="text-gray-500"
+            className="text-gray-400 text-center"
           />
           Back to Top
         </a>
