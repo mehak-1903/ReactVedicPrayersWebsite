@@ -110,8 +110,8 @@ export default function Card() {
         <div className="flex justify-center items-center w-full flex-col md:flex-row">
           <ul className="flex flex-col md:flex-row justify-center items-center w-full gap-9 text-semibold">
             {navli.map((list, index) => (
-              <li className="relative group text-lg">
-                <a href="#" key={`nav1-${index}`}>
+              <li  key={`nav1-${index}`} className="relative group text-lg">
+                <a href="#">
                   {list.name}
                   <FontAwesomeIcon
                     icon={faAngleDown}
@@ -122,7 +122,7 @@ export default function Card() {
                 {/* Dropdown Lists */}
                 {list.submenu && (
                   <ul className="absolute top-full -left-6 mt-2 w-[280px] mb-6 bg-white rounded-md shadow-md opacity-0 group-hover:opacity-100 group-hover:translate-x-0 translate-y-2 transition-all duration-300 z-50 invisible group-hover:visible">
-                    <li>
+                    
                       {list.submenu.map((item, subIndex) => (
                         <li key={`sub-${index}-${subIndex}`} className="text-black hover:pl-7 hover:text-gray-400 transition-all duration-300">
                           <a
@@ -134,17 +134,17 @@ export default function Card() {
                           <div className="border-b border-gray-200 w-20"></div>
                         </li>
                       ))}
-                    </li>
+                    
                   </ul>
                 )}
               </li>
             ))}
 
             {navli2.map((list, index) => (
-              <li className="text-lg">
+              <li key={`nav2-${index}`} className="text-lg">
                 <a
                   href="#"
-                  key={`nav2-${index}`}
+                  
                   className="flex items-center gap-1 pl-5 text-left py-3"
                 >
                   {list.navname}
@@ -195,10 +195,10 @@ export default function Card() {
         {bgImage.map((images, index) => (
           <div
             key={`card-${index}`}
-            className="w-full md:max-w-[288px] h-[356px] border border-black-300 mb-8 rounded-2xl overflow-hidden relative group"
+            className="w-full md:max-w-[288px] h-[356px] border border-black-300 mb-8 rounded-2xl overflow-hidden cursor-pointer relative group"
           >
             {/* Background Image Layer with Hover Scale */}
-
+          
             <div
               className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-105"
               style={{
