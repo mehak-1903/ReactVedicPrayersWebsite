@@ -8,9 +8,30 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import logo from "../assets/vedic-logo.png";
 import { faSearch, faBars } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
+import Searchbar from "./Searchbar";
+import Sidebar from "./Sidebar";
 
 const Header = () => {
+  const [search, setSearch] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  function searchBar(){
+      return setSearch(!search)
+  }
+
+  function handleSidebarOpen(){
+      setSidebarOpen(true)
+    }
+  
+
   return (
+    <>
+    {/* 🔍 Searchbar Overlay */}
+      {search && <Searchbar onClose={searchBar} />}
+
+      {/* Sidebar Overlay */}
+      {sidebarOpen && <Sidebar onClose={() => setSidebarOpen(false)}/>}
     <div className="flex justify-between items-center flex-col md:flex-row h-auto w-full max-w-screen-xl m-auto border-b border-grey-400 py-[30px] px-[12px]">
       <div className="flex gap-5">
         <a href="#" className="hover:text-orange-600">
@@ -39,15 +60,18 @@ const Header = () => {
       </div>
 
       <div className=" flex gap-3 ">
-        <button className="h-[30] w-[30] rounded-full border-none bg-[linear-gradient(to_right,#e45229_0%,#e99176_51%,#e45229_100%)] py-2 px-3 text-white">
+        <button onClick = {searchBar} className="py-3 px-4 text-white rounded-full border-none bg-[linear-gradient(to_top,#e45229_0%,#e99176_51%,#e45229_100%)] bg-[length:200%_200%] bg-[top_center] hover:bg-[bottom_center] transition-all duration-300">
           <FontAwesomeIcon icon={faSearch} />
         </button>
 
-        <button className="h-[30] w-[30] rounded-full border-none bg-[linear-gradient(to_right,#e45229_0%,#e99176_51%,#e45229_100%)] py-2 px-3 text-white">
+        <button onClick={handleSidebarOpen} className="py- px-4 text-white rounded-full border-none bg-[linear-gradient(to_top,#e45229_0%,#e99176_51%,#e45229_100%)] bg-[length:200%_200%] bg-[top_center] hover:bg-[bottom_center] transition-all duration-300 ">
           <FontAwesomeIcon icon={faBars} />
         </button>
       </div>
+
+      
     </div>
+    </>
   );
 };
 

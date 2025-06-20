@@ -99,7 +99,7 @@ const bgImage = [
   {
     image: "https://vedicprayers.com/wp-content/uploads/2024/06/hanuman-chalisa-360x360.jpeg",
     names: "Shri Hanuman Chalisa | श्री हनुमान चालीसा | PDF",
-    badge: "Aarti",
+    badge: "Aarti"
   },
 ];
 

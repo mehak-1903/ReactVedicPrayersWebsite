@@ -384,7 +384,7 @@ function Card2() {
               />
               <button
                 type="submit"
-                className="p-[10px_30px] text-lg text-white rounded-3xl border border-orange-600 bg-[linear-gradient(to_right,#e45229_0%,#e99176_51%,#e45229_100%)] bg-[length:200%_auto]"
+                className="p-[10px_30px] text-lg text-white rounded-3xl bg-[linear-gradient(to_right,#e45229_0%,#e99176_51%,#e45229_100%)] bg-[length:200%_auto] hover:bg-right bg-center transition-all duration-300"
               >
                 Search
               </button>
