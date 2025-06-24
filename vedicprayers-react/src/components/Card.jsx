@@ -74,6 +74,9 @@ const navli2 = [
     navname: "Kathayen",
   },
   {
+    navname: "Shri Bhagavad Gita",
+  },
+  {
     navname: "Contact",
   },
 ];
@@ -147,7 +150,7 @@ export default function Card() {
     <div>
       <div className="hidden md:block w-full max-w-screen-xl h-auto m-auto my-5">
         <div className="flex justify-center items-center w-full flex-col md:flex-row">
-          <ul className="flex flex-col md:flex-row justify-center items-center w-full gap-9 text-semibold">
+          <ul className="flex flex-col md:flex-row justify-center items-center w-full gap-7 text-semibold">
             {navli.map((list, index) => (
               <li  key={`nav1-${index}`} className="relative group text-lg">
                 <a href="#">
