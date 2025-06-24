@@ -235,18 +235,18 @@ const tags = [
 
 function Card2() {
   return (
-    <div className="w-full max-w-[1260px] h-auto m-auto my-10">
-      <div className="h-full w-full flex flex-col md:flex-row gap-5 mt-[24px] px-[12px]">
-        <div className="h-full w-full max-w-[840px] px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="w-full md:max-w-[1300px] m-auto my-10">
+      <div className="w-full flex flex-col md:flex-row mt-[24px] px-[12px]">
+        <div className="w-full md:max-w-[840px] px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
           {cardData.map((item, index) => (
             <div
               key={index}
               className="max-w-sm bg-white w-[400px] border border-gray-100 rounded-lg shadow-sm text-black border-gray-300"
             >
               <a href="#">
-                <div className="h-[300px] overflow-hidden relative">
+                <div className="h-[300px] overflow-hidden relative rounded-t-lg">
                   <img
-                    className="rounded-t-lg transition-transform duration-300 hover:scale-105 w-full h-full rounded object-cover"
+                    className="transition-transform duration-300 hover:scale-105 w-full h-full object-cover"
                     srcSet={item.image}
                     alt="Hanuman Ji"
                   />
@@ -302,7 +302,7 @@ function Card2() {
             {/* Zoomed Background Layered. */}
             <div
               className="absolute inset-0 bg-cover bg-no-repeat bg-center transition-transform duration-300 group-hover:scale-105 z-0"
-              style={{ backgroundImage: `url("https://vedicprayers.com/wp-content/uploads/2023/10/Mangalwar-Upay-550x367.jpeg")` }}
+              style={{ backgroundImage: `url(${img6})` }}
             ></div>
 
             {/* Overlay Text */}
@@ -311,7 +311,7 @@ function Card2() {
             {/* Text appears only on hover */}
             <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
               <h4 className="text-white text-2xl font-bold text-center ">
-                <a href="" className="hover:text-orange-600">
+                <a href="#" className="hover:text-orange-600">
                   Hanuman Worship | मंगलवार के दिन क्यों की जाती है हनुमान जी की
                   पूजा | PDF{" "}
                 </a>
