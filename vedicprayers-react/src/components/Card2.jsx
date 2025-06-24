@@ -18,6 +18,9 @@ import img9 from "../assets/Sankat-mochan-ashtak.png";
 import img10 from "../assets/hanuman19.webp";
 import img11 from "../assets/Shri-Hanuman-Bahuk.jpeg";
 import img12 from "../assets/rinmochan.jpg";
+import img13 from "../assets/Benefits-of-Hanuman-Worship.png";
+// Geeta Shlok
+import Shalok6 from "../assets/Shalok-6.png";
 // Ads
 import image1 from "../assets/kinsta1.png";
 import image2 from "../assets/GreenGreeks1.gif";
@@ -116,11 +119,11 @@ const cardData = [
     badge: "Stotra"
   },
   {
-    image: img12,
-    title: "Rinmochan Mangal Stotra | ऋणमोचक मंगल स्तोत्र | PDF",
+    image: img13,
+    title: "Benefits of Hanuman Worship | हनुमान जी की भक्ति से जीवन में आने वाले चमत्कारी परिवर्तन | PDF",
     description:
-      "मङ्गल , भूमिपुत्र(धरती का पुत्र), ऋणहर्ता (कर्ज का नाश करने वाले), धनप्रद(धन को प्रदान करने वाले), स्थिरासन…",
-    badge: "Stotra"
+      "भारतीय संस्कृति में हनुमान जी को असीम शक्ति, भक्ति, साहस और सेवा का प्रतीक माना जाता है। उन्हें भगवान शिव…",
+    badge: "Lord Hanuman"
   },
 ];
 
@@ -232,18 +235,18 @@ const tags = [
 
 function Card2() {
   return (
-    <div className="w-full max-w-screen-xl h-auto m-auto my-10">
-      <div className="h-full w-full flex flex-col md:flex-row gap-5">
-        <div className="h-full w-full max-w-3xl px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="w-full max-w-[1260px] h-auto m-auto my-10">
+      <div className="h-full w-full flex flex-col md:flex-row gap-5 mt-[24px] px-[12px]">
+        <div className="h-full w-full max-w-[840px] px-4 grid grid-cols-1 md:grid-cols-2 gap-6">
           {cardData.map((item, index) => (
             <div
               key={index}
-              className="max-w-sm bg-white border border-gray-100 rounded-lg shadow-sm text-black border-gray-300"
+              className="max-w-sm bg-white w-[400px] border border-gray-100 rounded-lg shadow-sm text-black border-gray-300"
             >
               <a href="#">
-                <div className="overflow-hidden relative">
+                <div className="h-[300px] overflow-hidden relative">
                   <img
-                    className="rounded-t-lg transition-transform duration-300 hover:scale-105 w-full h-auto rounded object-cover"
+                    className="rounded-t-lg transition-transform duration-300 hover:scale-105 w-full h-full rounded object-cover"
                     srcSet={item.image}
                     alt="Hanuman Ji"
                   />
@@ -295,7 +298,7 @@ function Card2() {
           <h2 className="font-bold text-xl text-gray-700 text-center">
             June 13, 2025
           </h2>
-          <div className="mt-7 w-full h-[300px] max-h-[300px] rounded-lg shadow-lg shadow-[0_4px_10px_rgba(0,0,0,0.6)] overflow-hidden relative group">
+          <div className="mt-7 w-full h-[300px] max-h-[300px] rounded-lg shadow-lg shadow-[0_8px_9px_0_rgba(0,0,0,0.6)] overflow-hidden relative group">
             {/* Zoomed Background Layered. */}
             <div
               className="absolute inset-0 bg-cover bg-no-repeat bg-center transition-transform duration-300 group-hover:scale-105 z-0"
@@ -314,6 +317,20 @@ function Card2() {
                 </a>
               </h4>
             </div>
+          </div>
+          
+          {/* Bhagavadgeeta */}
+
+          <h2 className="text-3xl text-center font-bold my-8">गीता ज्ञान</h2>
+
+          <div className="mb-[25px] border rounded-[10px] border-grey-400 w-full h-auto p-6">
+            <img src={Shalok6} alt="Bhagwad Geeta Shalok" className="rounded-[8px] shadow-[0_8px_9px_0_rgba(0,0,0,0.5)] mb-[25px]"/>
+            <h1 className="font-bold text-2xl mt-[25px] hover:text-orange-600 transition duration-300">
+              <a href="#" target = "_blank">
+              Shrimad Bhagavad Gita Chapter -1 Shalok – 6 | श्रीमद् भगवदगीता अध्याय एक – श्लोक छ: | PDF
+            </a>
+            </h1>
+            
           </div>
 
           {/* kinsta */}
