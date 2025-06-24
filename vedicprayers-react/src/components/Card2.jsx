@@ -8,16 +8,16 @@ import { faEllipsis } from "@fortawesome/free-solid-svg-icons";
 // Import Images
 import img1 from "../assets/Mangalwar-Vrat.jpeg";
 import img2 from "../assets/hanuman-aarti.jpeg";
-import img3 from "../assets/bajrang-baan.jpg";
-import img4 from "../assets/hanuman-sathika(2).png";
-import img5 from "../assets/hanuman-108.jpg";
+import img3 from "../assets/Shri-Hanuman-Bajrang-Baan.jpeg";
+import img4 from "../assets/Shri-Hanuman-Sathika.jpeg";
+import img5 from "../assets/Shri-Hanuman-Ji-108-Names.jpeg";
 import img6 from "../assets/Mangalwar-Upay.jpeg";
-import img7 from "../assets/shri-hanuman-chalisa.png";
-import img8 from "../assets/lord-hanuman-mantras.png";
+import img7 from "../assets/Hanuman-Chalisa.jpeg";
+import img8 from "../assets/Shri-Hanuman-Mantras.jpeg";
 import img9 from "../assets/Sankat-mochan-ashtak.png";
-import img10 from "../assets/hanuman19.webp";
+import img10 from "../assets/Hanuman-ji-worshipped.png";
 import img11 from "../assets/Shri-Hanuman-Bahuk.jpeg";
-import img12 from "../assets/rinmochan.jpg";
+import img12 from "../assets/rinmochan-mangl-stotra.jpeg";
 import img13 from "../assets/Benefits-of-Hanuman-Worship.png";
 // Geeta Shlok
 import Shalok6 from "../assets/Shalok-6.png";
@@ -246,14 +246,14 @@ function Card2() {
               <a href="#">
                 <div className="h-[300px] overflow-hidden relative rounded-t-lg">
                   <img
-                    className="transition-transform duration-300 hover:scale-105 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                     srcSet={item.image}
                     alt="Hanuman Ji"
                   />
 
                   {/* Badge */}
 
-                  <div className="absolute top-2 left-2 px-2 py-1 text-xs font-semibold text-white bg-orange-600 rounded-xl">
+                  <div className="absolute top-2 left-2 px-3 py-1 text-xs font-semibold text-white bg-[linear-gradient(to_right,#e45229_0%,#e99176_51%,#e45229_100%)] bg-[length:200%_auto] hover:bg-right bg-center transition-all duration-300 rounded-xl">
                     {item.badge}
                   </div>
                 </div>
