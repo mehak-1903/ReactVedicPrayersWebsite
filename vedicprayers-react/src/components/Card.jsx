@@ -1,11 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
-// import img1 from "../assets/Mangalwar-Vrat.jpeg";
+import img1 from "../assets/Mangalwar-Vrat.jpeg";
 import img2 from "../assets/Shri-Hanuman-Vrat-Katha.jpeg";
 import img3 from "../assets/hanuman-stuti.jpg";
 import img4 from "../assets/Shri-Hanuman-Mantras.jpeg";
 import img5 from "../assets/hanuman-aarti.jpeg";
+import img6 from "../assets/Shri-Hanuman-Bahuk.jpeg";
 import Flag from "react-world-flags";
+import {useState} from "react";
+
 const navli = [
   {
     name: "Shri Ganesh Ji",
@@ -101,9 +104,45 @@ const bgImage = [
     names: "Shri Hanuman Chalisa | श्री हनुमान चालीसा | PDF",
     badge: "Aarti"
   },
+   {
+    image: "https://vedicprayers.com/wp-content/uploads/2023/10/Mangalwar-Upay-550x367.jpeg",
+    names: "Mangalwar Vrat | मंगलवार व्रत रखने से दूर होंगे संकट, जानिए पूजा की सही विधि | PDF",
+    badge: "Lord Hanuman",
+  },
+   {
+    image: "https://vedicprayers.com/wp-content/uploads/2023/10/Mangalwar-Upay-550x367.jpeg",
+    names: "Mangalwar Vrat | मंगलवार व्रत रखने से दूर होंगे संकट, जानिए पूजा की सही विधि | PDF",
+    badge: "Lord Hanuman",
+  },
+   {
+    image: "https://vedicprayers.com/wp-content/uploads/2023/10/Mangalwar-Upay-550x367.jpeg",
+    names: "Mangalwar Vrat | मंगलवार व्रत रखने से दूर होंगे संकट, जानिए पूजा की सही विधि | PDF",
+    badge: "Lord Hanuman",
+  },
+   {
+    image: "https://vedicprayers.com/wp-content/uploads/2023/10/Mangalwar-Upay-550x367.jpeg",
+    names: "Mangalwar Vrat | मंगलवार व्रत रखने से दूर होंगे संकट, जानिए पूजा की सही विधि | PDF",
+    badge: "Lord Hanuman",
+  }
 ];
 
 export default function Card() {
+      const itemsPerView = 5;       // 5images showed on window
+      const itemsPerScroll = 2;     // scroll 2 images hongi
+
+      const totalDots = Math.ceil((bgImage.length - itemsPerView) / itemsPerScroll) + 1;     // eg: 8 images = (8-5) / 2 + 1 = 3dots
+
+      const[currentIndex, setCurrentIndex] = useState(0);
+
+      const handleDotClick = (index) => {
+            setCurrentIndex(index * itemsPerScroll); 
+      }
+
+      const translatePercentage = ((100 / itemsPerView) - 2) * currentIndex;  // every image takes 20% width out of full width
+//       const cardWidth = 288;
+// const gap = 16;
+// const translateX = currentIndex * (cardWidth + gap);
+
   return (
     <div>
       <div className="hidden md:block w-full max-w-screen-xl h-auto m-auto my-5">
@@ -113,6 +152,9 @@ export default function Card() {
               <li  key={`nav1-${index}`} className="relative group text-lg">
                 <a href="#">
                   {list.name}
+
+
+
                   <FontAwesomeIcon
                     icon={faAngleDown}
                     className="text-gray-400 text-sm pl-1"
@@ -191,11 +233,12 @@ export default function Card() {
           </ul>
         </div>
       </div>
-      <div className="flex justify-center items-center px-4 w-full gap-4 flex-col md:flex-row">
+      <div className="w-full overflow-hidden p-[10px] relative">
+      <div className="flex gap-6 object-cover transition-transform duration-700 ease-in-out px-7" style={{ transform: `translateX(-${translatePercentage}%)`}}>
         {bgImage.map((images, index) => (
           <div
             key={`card-${index}`}
-            className="w-full md:max-w-[288px] h-[356px] border border-black-300 mb-8 rounded-2xl overflow-hidden cursor-pointer relative group"
+            className="w-full md:w-[20%] flex-shrink-0 h-[356px] border border-black-300 mb-8 rounded-2xl overflow-hidden cursor-pointer relative group"
           >
             {/* Background Image Layer with Hover Scale */}
           
@@ -226,8 +269,87 @@ export default function Card() {
               </div>
             </div>
           </div>
+
+
         ))}
+        
       </div>
+      </div>
+      <div className="flex justify-center mt-4 gap-3">
+  {Array.from({ length: totalDots }).map((_, i) => (
+    <button
+      key={i}
+      onClick={() => handleDotClick(i)}
+      className={`transition-all duration-300 rounded-full ${
+        currentIndex === i * itemsPerScroll
+          ? 'bg-[linear-gradient(to_right,#e45229_0%,#e99176_51%,#e45229_100%)] w-8 h-2'  // 🔸 Active dot: wider + orange
+          : 'bg-gray-300 w-3 h-3'    // ⚪ Inactive dot: small + gray
+      }`}
+    ></button>
+  ))}
+</div>
+
     </div>
   );
 }
+
+// import React, { useState } from 'react';
+
+// const images = [
+//   'https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?auto=format&fit=crop&w=2560&q=80',
+//   'https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=2940&q=80',
+//   'https://images.unsplash.com/photo-1518623489648-a173ef7824f3?auto=format&fit=crop&w=2762&q=80',
+//   'https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=2600&q=80',
+//   'https://images.unsplash.com/photo-1519985176271-adb1088fa94c?auto=format&fit=crop&w=2600&q=80',
+//   'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=2600&q=80',
+//   'https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=2600&q=80',
+//   'https://images.unsplash.com/photo-1587614203976-365c74645e83?auto=format&fit=crop&w=2600&q=80',
+// ];
+
+// export default function CarouselMoveTwoImages() {
+//   const itemsPerView = 5;
+//   const itemsPerScroll = 2;
+//   const totalDots = Math.ceil((images.length - itemsPerView) / itemsPerScroll) + 1;
+
+//   const [currentIndex, setCurrentIndex] = useState(0);
+
+//   const handleDotClick = (index) => {
+//     setCurrentIndex(index * itemsPerScroll);
+//   };
+
+//   const translatePercentage = (100 / itemsPerView) * currentIndex;
+
+//   return (
+//     <div className="w-full overflow-hidden">
+//       <div
+//         className="flex transition-transform duration-700 ease-in-out"
+//         style={{ transform: `translateX(-${translatePercentage}%)` }}
+//       >
+//         {images.map((src, index) => (
+//           <img
+//             key={index}
+//             src={src}
+//             alt={`Slide ${index}`}
+//             className="w-1/5 h-[300px] object-cover flex-shrink-0"
+//           />
+//         ))}
+//       </div>
+
+//       {/* Dots */}
+//       <div className="flex justify-center mt-4 gap-2">
+//         {Array.from({ length: totalDots }).map((_, i) => (
+//           <button
+//             key={i}
+//             onClick={() => handleDotClick(i)}
+//             className={`transition-all duration-300 rounded-full ${
+//   currentIndex === i * itemsPerScroll
+//     ? 'bg-orange-500 w-8 h-2'
+//     : 'bg-gray-300 w-3 h-3 '
+// }`}
+
+//           ></button>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// }
