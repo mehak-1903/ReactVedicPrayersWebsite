@@ -103,8 +103,10 @@ export default function Sidebar({ onClose }) {
           />
         </div>
 
-        {/* Navigation */}
-      <div  className="flex-1 overflow-y-auto mt-60 w-[250px] space-y-2">
+        {/* Navigation */} 
+         {/* flex-1 means: ye area maximum height le sakta hai.  
+        overflow-y-auto means: agar content zyada ho gaya, toh scroll bar show ho jaayega. */}
+      <div className="flex-1 overflow-y-auto mt-60 w-[250px] space-y-2">   
         <ul className="space-y-2">
           {navItems.map((item, idx) => (
             <li key={idx} className="relative group">
