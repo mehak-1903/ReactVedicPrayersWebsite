@@ -8,16 +8,13 @@ export default function Searchbar({onClose}) {
   useEffect(() => {
     const handlekeyDown = (e) => {
       if (e.key === "Escape") {
-        setIsVisible(false); //hide the component
+        onClose();  //Call the parent to hide searchbar and show other components
       }
     };
 
     window.addEventListener("keydown", handlekeyDown);
     return () => window.removeEventListener("keydown", handlekeyDown);
-  }, []);
-
-  if (!isVisible) return null; // hides the whole component
-
+  }, [onClose]);
   return (
     <div className="w-full min-h-screen bg-white flex items-center justify-center relative">
         <div onClick={onClose} className="absolute top-6 right-8 cursor-pointer"><FontAwesomeIcon icon={faTimes} className="text-xl text-gray-500"/></div>
