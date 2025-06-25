@@ -83,9 +83,9 @@ export default function Sidebar({ onClose }) {
     }
   };
   return (
-    <div className="w-full bg-white bg-opacity-50 fixed z-50 h-full">
+    <div className="w-full bg-white bg-opacity-50 fixed z-50 min-h-screen">
       {/* Overlay */}
-      <div className="absolute right-0 w-[300px] h-full bg-white shadow-lg p-4 z-50 opacity-100">
+      <div className="absolute right-0 w-[300px] h-full bg-white shadow-lg p-4 z-50 overflow-y-auto">
         {/* Close button */}
         <div className="absolute right-6 cursor-pointer text-gray-400">
           <FontAwesomeIcon
@@ -104,8 +104,8 @@ export default function Sidebar({ onClose }) {
         </div>
 
         {/* Navigation */}
-
-        <ul className="mt-60 w-[250px] space-y-2">
+      <div  className="flex-1 overflow-y-auto mt-60 w-[250px] space-y-2">
+        <ul className="space-y-2">
           {navItems.map((item, idx) => (
             <li key={idx} className="relative group">
               <div onClick={() => handleClick(idx)} className="flex justify-between items-center py-2 cursor-pointer text-sm font-medium">
@@ -169,7 +169,7 @@ export default function Sidebar({ onClose }) {
               <div className="ml-auto border border-gray-200 rounded px-2 py-1">
                 <FontAwesomeIcon
                   icon={faAngleDown}
-                  className={`text-orange-400 transition-all duration-300 ${
+                  className={`text-orange-400 transition-[max-height,opacity] duration-300 ${
                     languageDropdown ? "rotate-180" : ""
                   } `}
                 />
@@ -178,14 +178,14 @@ export default function Sidebar({ onClose }) {
 
             {/* Dropdown */}
             <div
-              className={`ml-4 overflow-hidden transition-all duration-300 ease-in-out ${
+              className={`ml-4 overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${
                 languageDropdown
                   ? "max-h-[500px] opacity-100"
                   : "max-h-0 opacity-0"
               }`}
             >
               <ul className="text-sm bg-white rounded-md shadow-md ">
-                <li className="text-black hover:pl-7 hover:text-gray-300 transition-all duration-300">
+                <li className="text-black hover:pl-7 hover:text-gray-300 transition-[max-height,opacity] duration-300">
                   <a
                     href="#"
                     className="flex items-center gap-1 pl-5 text-left py-3"
@@ -210,9 +210,9 @@ export default function Sidebar({ onClose }) {
             {/* )} */}
           </li>
         </ul>
-
+      </div>
         {/* Footer Icons */}
-        <div className="absolute bottom-4 left-8 h-auto flex gap-4">
+        <div className="mt-auto pt-8 flex justify-start gap-4">
           <a href="#" className="hover:text-orange-600">
             <FontAwesomeIcon icon={faFacebookF} />
           </a>

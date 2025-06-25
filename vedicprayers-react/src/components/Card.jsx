@@ -126,8 +126,8 @@ const bgImage = [
     badge: "Lord Hanuman",
   },
    {
-    image: "https://vedicprayers.com/wp-content/uploads/2023/10/Mangalwar-Upay-550x367.jpeg",
-    names: "Mangalwar Vrat | मंगलवार व्रत रखने से दूर होंगे संकट, जानिए पूजा की सही विधि | PDF",
+    image: img2,
+    names: "Shri Hanuman Sathika | श्री हनुमान साठिका | PDF",
     badge: "Lord Hanuman",
   }
 ];
@@ -140,14 +140,23 @@ export default function Card() {
 
       const[currentIndex, setCurrentIndex] = useState(0);
 
+      // const handleDotClick = (index) => {
+      //       setCurrentIndex(index * itemsPerScroll); 
+      // }
       const handleDotClick = (index) => {
-            setCurrentIndex(index * itemsPerScroll); 
+          const maxIndex = Math.max(0, bgImage.length - itemsPerView); // avoid over-scrolling
+  const newIndex = Math.min(index * itemsPerScroll, maxIndex);
+
+            setCurrentIndex(newIndex); 
       }
 
-      const translatePercentage = ((100 / itemsPerView) - 2) * currentIndex;  // every image takes 20% width out of full width
-//       const cardWidth = 288;
-// const gap = 16;
-// const translateX = currentIndex * (cardWidth + gap);
+      // const translatePercentage = (100 / itemsPerView) * currentIndex;  // every image takes 20% width out of full width
+      const cardWidth = 288;
+const gap = 8;
+const visibleWidth = (cardWidth + gap) * itemsPerView; // total visible area width
+const maxTranslateX = (cardWidth + gap) * (bgImage.length - itemsPerView);
+const translateX = Math.min(currentIndex * (cardWidth + gap), maxTranslateX);
+
 
   return (
     <div>
@@ -235,12 +244,23 @@ export default function Card() {
           </ul>
         </div>
       </div>
+      
+      {/* Cards */}
       <div className="w-full overflow-hidden p-[10px] relative">
-      <div className="flex gap-6 object-cover transition-transform duration-700 ease-in-out px-7" style={{ transform: `translateX(-${translatePercentage}%)`}}>
+      <div className="flex gap-4 object-cover transition-transform duration-700 ease-in-out px-4" 
+      // style={{ transform: `translateX(-${translatePercentage}%)`}}
+       style={{
+    transform: `translateX(-${translateX}px)`,
+    width: `${(cardWidth + gap) * bgImage.length}px`, // dynamic width of full strip
+  }}
+      >
         {bgImage.map((images, index) => (
           <div
             key={`card-${index}`}
-            className="w-full md:w-[20%] flex-shrink-0 h-[356px] border border-black-300 mb-8 rounded-2xl overflow-hidden cursor-pointer relative group"
+            className="w-[288px] h-[356px] flex-shrink-0 px-6 border border-black-300 mb-8 rounded-2xl overflow-hidden cursor-pointer relative group"
+          style={{
+          marginRight: index !== bgImage.length - 1 ? `${gap}px` : "0",
+        }}
           >
             {/* Background Image Layer with Hover Scale */}
           
@@ -255,15 +275,17 @@ export default function Card() {
             ></div>
 
             {/* Overlay Layer (non-scaling)*/}
-            <div className="absolute inset-0 opacity-80 bg-[#17243b] rounded-2xl z-10">
-              <div className="absolute top-10 z-20 flex flex-col items-center justify-center h-full px-6 mt-4">
+            <div className="absolute inset-0 opacity-80 bg-[#454f60] rounded-2xl z-10">
+              {/* <div className="absolute inset-y-0 z-20 flex flex-col items-center justify-center px-6 pt-32"> */}
+              <div className="absolute inset-0 pt-28 flex flex-col items-center justify-center px-6">
+
                 <span className="px-3 py-1 w-auto rounded-2xl text-white mb-2 bg-[linear-gradient(to_right,#e45229_0%,#e99176_51%,#e45229_100%)] bg-[length:200%_auto] hover:bg-right bg-center transition-all duration-300">
                   <a href="#">{images.badge}</a>
                 </span>
-                <h4 className="text-center" key={`name-${index}`}>
+                <h4 className="text-center pb-5" key={`name-${index}`}>
                   <a
                     href="#"
-                    className="text-[22px] text-white font-bold leading-snug hover:text-orange-600"
+                    className="text-[22px] text-white font-bold leading-snug hover:text-orange-500"
                   >
                     {images.names}
                   </a>
