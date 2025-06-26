@@ -235,6 +235,7 @@ const tags = [
 
 function Card2() {
   return (
+    <>
     <div className="w-full md:max-w-[1300px] m-auto my-10">
       <div className="w-full flex flex-col md:flex-row mt-[24px] px-[12px]">
         <div className="w-full md:max-w-[840px] px-4 grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -566,6 +567,7 @@ function Card2() {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
