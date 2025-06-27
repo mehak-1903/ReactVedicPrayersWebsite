@@ -17,7 +17,7 @@ function App() {
         <>
           <Header onSearchClick={() => setSearchbarVisible(true)} />
             {/* Sticky navbar while scrolling */}
-          <div className="sticky z-50 top-0 bg-white py-4">
+          <div className="sticky z-20 top-0 bg-white py-4">
             <Navbar />
           </div>
           
